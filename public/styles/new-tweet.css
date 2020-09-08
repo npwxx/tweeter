@@ -1,0 +1,25 @@
+.new-tweet form {
+  display: flex;
+  margin: 1.5em auto 1.5em;
+  width: 90%;
+  flex-direction: column;
+}
+.new-tweet form div {
+  display: flex;
+  font-family: 'Bungee', cursive;
+  justify-content: space-between;
+}
+.new-tweet button[type="submit"] {
+  background-color:#4056A1;
+  border-color: #4056A1;
+  border-style: solid;
+  color: #FFFFFF;
+}
+#tweet-text {
+  background-color: inherit;
+  margin-bottom: .5em;
+  outline: none;
+  resize: none;
+  border: none;
+  border-bottom: #545149 4px solid;
+}
