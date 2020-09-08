@@ -24,4 +24,9 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- 
+ /* main element */
+body main {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+}
