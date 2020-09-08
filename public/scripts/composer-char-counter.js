@@ -4,9 +4,9 @@ $(document).ready(function() {
     let remainingText = 140 - text;
     $("#counter").val(remainingText + "/140");
     if (remainingText < 0) {
-      $("#counter").css("color", "red");
-      //console.log($(this));
-      //$(this.parentNode.childNodes[5].childNodes[3]).css("color", "red");
+      $("#counter").addClass("error");
+    } else {
+      $("#counter").removeClass("error");
     }
   });
 });

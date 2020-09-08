@@ -23,6 +23,6 @@
   border: none;
   border-bottom: #545149 4px solid;
 }
-/* #counter {
-  color: #545149, red;
-} */
+.counter.error {
+  color: red;
+}
