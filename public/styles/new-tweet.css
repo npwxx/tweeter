@@ -1,7 +1,7 @@
 .new-tweet form {
   display: flex;
   margin: 1.5em auto 1.5em;
-  width: 90%;
+  width: 95%;
   flex-direction: column;
 }
 .new-tweet form div {

@@ -25,7 +25,7 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
  /* main element */
-body main {
+body > main {
   margin: auto;
   width: 90%;
 }
