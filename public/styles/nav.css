@@ -1,15 +1,19 @@
 nav {
-  height: 120px;
+  display:flex;
+  height: 90px;
   width: 100vw;
   background: linear-gradient(#8c99c6, #4056A1 );
   color: #FFFFFF;
   padding: 1.5em;
-  display:flex;
   justify-content: space-between;
+  align-items: baseline;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
  }
 
  nav .logo {
    font-family: 'Bungee', cursive;
+   font-size: xx-large;
  }
 
  nav .tweet-link {
