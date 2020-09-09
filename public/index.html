@@ -22,6 +22,8 @@
     <!-- new tweet -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!-- existing tweets -->
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
   </head>
   
   <body>
@@ -31,13 +33,8 @@
       <div class=""><a><strong>Write</strong>&nbsp;a new tweet</a></div>
     </nav>
     <header>
-      <div>
         <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
         <h2>Nicole</h2>
-      </div>
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
@@ -52,12 +49,30 @@
           </div>
         </form>
       </section>
+      <!-- Tweet feed -->
+      <section id="tweets">
+        <article>
+          <header>
+            <div>
+              <img src="/images/profile-hex.png">
+              <span>username</span>
+            </div>
+            <span class="user-id">@userID</span>
+          </header>
+          <main>text text text</main>
+          <footer>
+            <span>10 days ago</span>
+            <span><i class="fas fa-flag"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-retweet">&nbsp;&nbsp;&nbsp;</i><i class="fas fa-heart"></i></span>
+          </footer>
+        </article>
+      </section>
     </main>
   </body>
   </html>
   
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/97a47863bd.js" crossorigin="anonymous"></script>
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
