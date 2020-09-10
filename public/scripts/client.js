@@ -48,13 +48,36 @@ $(document).ready(function() {
     return $tweet;
   };
   const renderTweets = function(tweets) {
+    $('#tweets').empty();
     // loops through tweets
     for (let tweet of tweets) {
       // calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
-      $('#tweets').append($tweet);
+      $('#tweets').prepend($tweet);
     }
   };
   renderTweets(tweetData);
+  // const fetchTweets = () => {
+  //   $.ajax({
+
+  //   });
+  // };
+
+  $(".new-tweet > form").submit(function(event) {
+    event.preventDefault();
+    const serializedData = $(this).serialize();
+
+    // if ($("#tweet-text").length === 0 || $("#tweet-text").length > 140) {
+    //   $("span").text("Validated...").show();
+    //   return;
+    // }
+
+    //submit data to the server
+    $.post("/tweets", serializedData)
+      .then((response) => {
+        console.log(response);
+        renderTweets(tweetData);
+      });
+  });
 });
