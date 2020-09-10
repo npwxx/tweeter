@@ -4,7 +4,7 @@
   width: 95%;
   flex-direction: column;
 }
-.new-tweet form div {
+.new-tweet .form-controls {
   display: flex;
   font-family: 'Bungee', cursive;
   justify-content: space-between;
@@ -25,4 +25,16 @@
 }
 .counter.error {
   color: red;
+}
+.error-message {
+  margin-bottom: 1em;
+  border: red 3px solid;
+  color: red;
+  padding: .5em;
+  display: none;  
+}
+.error-message::before, .error-message::after {
+  content: "⚠";
+  margin-left: .5em;
+  margin-right: .5em;
 }

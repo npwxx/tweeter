@@ -11,6 +11,7 @@ $(document).ready(function() {
   };
 
   const createTweetElement = function(tweet) {
+    console.log(tweet);
     let $tweet = $(`<article>
     <header>
       <div>
@@ -21,7 +22,7 @@ $(document).ready(function() {
     </header>
     <main>${escape(tweet.content.text)}</main>
     <footer>
-      <span>10 Days ago</span>
+      <span>${(moment(tweet.created_at).fromNow())}</span>
       <span><i class="fas fa-flag"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-retweet">&nbsp;&nbsp;&nbsp;</i><i class="fas fa-heart"></i></span>
     </footer>
   </article>`);
@@ -46,16 +47,28 @@ $(document).ready(function() {
   };
   loadTweets();
 
+  const showError = function(message) {
+    const $error = $(".error-message");
+    $error.text(message);
+    $error.slideDown();
+  };
+
+  const hideError = function() {
+    const $error = $(".error-message");
+    $error.slideUp();
+  };
+
   $(".new-tweet > form").submit(function(event) {
+    hideError();
     event.preventDefault();
     const serializedData = $(this).serialize();
     const text = $("#tweet-text").val();
     if (!text) {
-      alert("Text area can't be empty!");
+      showError("Text area can't be empty!");
       return;
     }
     if (text.length > 140) {
-      alert("Character limit reached!\nPlease reduce tweet size.");
+      showError("Character limit reached! Please reduce tweet size.");
       return;
     }
     //submit data to the server
