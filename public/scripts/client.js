@@ -4,32 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
-  const tweetData = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
-
   const createTweetElement = function(tweet) {
     let $tweet = $(`<article>
     <header>
@@ -57,27 +31,32 @@ $(document).ready(function() {
       $('#tweets').prepend($tweet);
     }
   };
-  renderTweets(tweetData);
-  // const fetchTweets = () => {
-  //   $.ajax({
 
-  //   });
-  // };
+  const loadTweets = function() {
+    $.get("/tweets")
+      .then((tweets) => {
+        renderTweets(tweets);
+      });
+  };
+  loadTweets();
 
   $(".new-tweet > form").submit(function(event) {
     event.preventDefault();
     const serializedData = $(this).serialize();
-
-    // if ($("#tweet-text").length === 0 || $("#tweet-text").length > 140) {
-    //   $("span").text("Validated...").show();
-    //   return;
-    // }
-
+    const text = $("#tweet-text").val();
+    if (!text) {
+      alert("Text area can't be empty!");
+      return;
+    }
+    if (text.length > 140) {
+      alert("Character limit reached!\nPlease reduce tweet size.");
+      return;
+    }
     //submit data to the server
     $.post("/tweets", serializedData)
-      .then((response) => {
-        console.log(response);
-        renderTweets(tweetData);
+      .then(() => {
+        loadTweets();
+        $("#tweet-text").val("");
       });
   });
 });
