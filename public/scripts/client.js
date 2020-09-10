@@ -23,7 +23,7 @@ $(document).ready(function() {
     <main>${escape(tweet.content.text)}</main>
     <footer>
       <span>${(moment(tweet.created_at).fromNow())}</span>
-      <span><i class="fas fa-flag"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-retweet">&nbsp;&nbsp;&nbsp;</i><i class="fas fa-heart"></i></span>
+      <span class="tweet-icons"><i class="fas fa-flag"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-retweet">&nbsp;&nbsp;&nbsp;</i><i class="fas fa-heart"></i></span>
     </footer>
   </article>`);
     return $tweet;

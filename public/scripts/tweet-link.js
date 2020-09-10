@@ -7,7 +7,7 @@ $(document).ready(function() {
       return;
     }
     $('html, body').animate({
-      scrollTop: ($header.offset().top)
+      scrollTop: 0
     }, 500);
     $newTweet.slideDown();
     $("#tweet-text").focus();
