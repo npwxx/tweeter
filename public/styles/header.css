@@ -1,17 +1,24 @@
-body > header {
+body > div > header {
   display: flex;
-  height: 350px;
+  height: 440px;
   width: 100%;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   background-color: #00cf94;
   background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
-  margin-top: 90px;
   padding: 1.5em;
-  /* TODO: pick transparent image/color & save image into images folder*/
+  padding-top: calc(90px + 1.5em);
 }
-body > header > img {
+body > div > header > img {
   width: 210px;
   height: 210px;
+}
+@media only screen and (min-width: 1024px) {
+  body > div > header {
+    padding-top: 1.5em;
+    width: 35%;
+    margin: 1em;
+    align-self: center;
+  }
 }
