@@ -4,7 +4,8 @@ nav {
   height: 90px;
   width: 100vw;
   /* background: linear-gradient(#8c99c6, #4056A1 ); */
-  background-color: transparent;
+  background-color: #00cf94;
+  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
   color: #FFFFFF;
   padding: 1.5em;
   justify-content: space-between;
