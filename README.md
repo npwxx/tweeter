@@ -26,7 +26,7 @@ This repository is the starter code for the project: Students will fork and clon
 ### Screen Shots
 ## Desktop
 Screenshot of desktop version
-!["Screenshot of desktop version"](w4/tweeter/docs/desktop-top.png)
+!["Screenshot of desktop version"](docs/Mobile-top.png)
 ## Mobile
 Screenshot of mobile version
-!["Screenshot of desktop version"](w4/tweeter/docs/Mobile-top.png)
+!["Screenshot of desktop version"](docs/Mobile-top.png)
