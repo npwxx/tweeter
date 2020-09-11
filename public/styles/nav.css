@@ -1,21 +1,32 @@
+/* fixed nav bar */
 nav {
   display:flex;
   height: 90px;
   width: 100vw;
-  background: linear-gradient(#8c99c6, #4056A1 );
+  /* background: linear-gradient(#8c99c6, #4056A1 ); */
+  background-color: #00cf94;
+  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
   color: #FFFFFF;
   padding: 1.5em;
   justify-content: space-between;
-  align-items: baseline;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
+  position: fixed; 
+  top: 0; 
  }
-
- nav .logo {
-   font-family: 'Bungee', cursive;
-   font-size: xx-large;
- }
-
- nav .tweet-link {
-   font-family: 'Source Sans Pro', sans-serif;
- }
+/* Sizing & font for nav logo */
+nav .logo {
+  font-family: 'Bungee', cursive;
+  font-size: xx-large;
+}
+/* changed pointer for the tweet-link */
+nav .tweet-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+/* colour change & animation of tweet link arrows while on hover */
+nav .tweet-link:hover > i {
+  color: red;
+  transform: translateY(5px);
+  transition: all .5s;
+}

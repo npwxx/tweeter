@@ -26,11 +26,14 @@
   display: flex;
   align-items: center;
 }
+
 .user-id {
-  visibility: hidden;
   color: rgb(38, 134, 102);
 }
-#tweets > article:hover .user-id {
+.user-id, .tweet-icons {
+  visibility: hidden;
+}
+#tweets > article:hover .user-id, #tweets > article:hover .tweet-icons {
   visibility: visible;
 }
 #tweets > article > footer {
